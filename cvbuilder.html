@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV Builder</title>
+    <link rel="stylesheet" href="css/cv.css">
+    <script src="js/script.js"> </script>
+</head>
+
+<body>
+    <div class="main">
+
+        <div class="titlebar">
+
+            <div class="tbar-left">
+                <div class="burger-btn" onclick="myfunction(this)">
+                    <div class="bar1"></div>
+                    <div class="bar2"></div>
+                    <div class="bar3"></div>
+
+                </div>
+
+                <div class="nmims-logo">
+                    <img src="assets/nmims-logo.png" height=40px>
+                </div>
+            </div>
+
+            <div class="tbar-right">
+
+                <div class="profile">
+                    <img src="assets/gear.png" height="25px" srcset="">
+                    <p> SETTINGS</p>
+                </div>
+
+                <div class="logout">
+                    <img src="assets/logout.png" height="25px" alt="" srcset="">
+                    <p>LOGOUT</p>
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="content">
+
+            <div class="menu">
+
+                <div class="index menuItem" onclick="home()">Home</div>
+                <div class="CVBulider menuItem" onclick="cvbuilder()" style="background-color: #8f2e23 ;color: white;">
+                    CV Builder</div>
+                <div class="Docs menuItem" onclick="docs()">Documents</div>
+                <div class="prep menuItem" onclick="prep();">Preparation</div>
+
+            </div>
+
+
+            <div class="form">
+
+                <form action="">
+
+                    <h2>Basic details</h2>
+                    <div class="basics">
+
+                        <div class="name">
+                            <p>Full Name</p>
+                            <input type="text" name="name" id="name">
+                        </div>
+
+                        <div class="email">
+                            <p>NMIMS Email</p>
+                            <input type="email" name="email" id="email">
+                        </div>
+
+
+                        <div class="l-url">
+                            <p>Linkedin URL</p>
+                            <input type="url" name="linkedin" id="linkedin">
+                        </div>
+
+                        <div class="g-url">
+
+                            <p>GitHub URL</p>
+                            <input type="url" name="GitHub" id="GitHub">
+                        </div>
+
+                        <div class="lang">
+                            <p>Languages Known</p>
+                            <input type="text" name="lang" id="lang">
+                        </div>
+
+                        <div class="age">
+
+                            <p>Age</p>
+                            <input type="number" name="age" id="age" max="25" min="18">
+                        </div>
+
+                        <div class="course">
+                            <p>Course</p>
+                            <select name="course" id="course" autocomplete="off">
+                                <option selected disabled>Select your Course</option>
+                                <option value="btech" id="btech" onclick="enableSpecs(); gpa(); " >B.Tech</option>
+                                <option value="mbatech" id="mba" onclick="disableOtherSpecs(); gpa();">MBA Tech</option>
+                            </select>
+                        </div>
+
+
+                        <div class="specialisation">
+                            <p>Specialisation</p>
+                            <select name="specialisation" id="specialisation" autocomplete="off">
+                                <option selected disabled>Select your specialisation</option>
+                                <option value="CE" id="ce">Computer Engineering (CE)</option>
+                                <option value="CSBS" class="specs">Computer Science & Business Systems (CSBS)</option>
+                                <option value="AIDS" class="specs">Aritificial Intelligence & Data Science (AI & DS)</option>
+                            </select>
+                        </div>
+
+                        <div class="gender">
+                            <p>Gender</p>
+                            <select name="gender" id="gender" autocomplete="off">
+                                <option selected disabled>Select your Gender</option>
+                                <option value="male">Male</option>
+                                <option value="female">Female</option>
+                            </select>
+                        </div>
+                        <br>
+                    </div>
+
+
+
+                    <h2 class="acad">Academic Background</h2>
+                    <div class="Academic">
+
+                        <h3>UNDERGRADUATE</h3>
+                        <div class="sem-wise-gpa" id="sem-gpa">
+                          
+                        </div>
+                        <div class="undergrad">
+                            <div class="Institute">
+                                <p>Institute</p>
+                                <input type="text" name="uni-name" id="name">
+                            </div>
+
+                            <div class="College">
+                                <p>College</p>
+                                <input type="text" name="college" id="college">
+                            </div>
+
+
+                            <div class="Year">
+                                <p>Year</p>
+                                <input type="tel" name="year" id="year">
+                            </div>
+
+                            <div class="Score">
+
+                                <p>CGPA</p>
+                                <input type="number" name="score" id="Score" min="0.0" max="4.0">
+                            </div>
+                        </div>
+
+                        <h3>12th/Diploma</h3>
+                        <div class="class12">
+
+
+                            <div class="Institute">
+                                <p>Institute</p>
+                                <input type="text" name="name" id="name">
+                            </div>
+
+                            <div class="Board">
+                                <p>Board</p>
+                                <input type="text" name="board" id="college">
+                            </div>
+
+
+                            <div class="Year">
+                                <p>Year</p>
+                                <input type="tel" name="year" id="year">
+                            </div>
+
+                            <div class="Score">
+
+                                <p>CGPA / %</p>
+                                <input type="number" name="score" id="Score" min="0.0" max="4.0">
+                            </div>
+                        </div>
+
+                        <h3>10th</h3>
+                        <div class="class10">
+
+
+                            <div class="Institute">
+                                <p>Institute</p>
+                                <input type="text" name="name" id="name">
+                            </div>
+
+                            <div class="Board">
+                                <p>Board</p>
+                                <input type="text" name="board" id="college">
+                            </div>
+
+
+                            <div class="Year">
+                                <p>Year</p>
+                                <input type="tel" name="year" id="year">
+                            </div>
+
+                            <div class="Score">
+
+                                <p>CGPA / %</p>
+                                <input type="number" name="score" id="Score" min="0.0" max="4.0">
+                            </div>
+                        </div>
+
+
+                        <br>
+                    </div>
+
+
+                    <div class="internships">
+
+                        <h2>Internships</h2>
+                        <div class="addIntern">
+                            <button class="addInternship"> Add Internship</button>
+                        </div>
+
+                        <h3>Internship 1</h3>
+
+                        <form action="">
+
+                            <div class="InternshipForm">
+                                <div class="role">
+                                    <p>Role</p>
+                                    <input type="text" name="role" id="">
+                                </div>
+
+                                <div class="company">
+                                    <p>Company name</p>
+                                    <input type="text" name="company">
+                                </div>
+
+                                <div class="duration">
+                                    <p>Duration</p>
+                                    <input type="number" name="duration" min="1" max="12">
+                                </div>
+
+                                <div class="intern-desc">
+                                    <p>Description</p>
+                                    <textarea name="" id="" cols="30" rows="5"></textarea>
+                                </div>
+                            </div>
+                            <div class="buttons">
+                                <button class="del">Delete</button>
+                                <button class="add">ADD</button>
+                            </div>
+                        </form>
+
+                        <br>
+                    </div>
+
+                    <div class="Projects">
+
+                        <h2>Projects</h2>
+                        <div class="addProj">
+                            <button class="addProject"> Add Project</button>
+                        </div>
+
+                        <h3>Project 1</h3>
+
+                        <form action="">
+
+                            <div class="ProjectForm">
+                                <div class="title">
+                                    <p>Title</p>
+                                    <input type="text" name="role" id="">
+                                </div>
+                                <div class="duration">
+                                    <p>Duration</p>
+                                    <input type="number" name="duration" min="1" max="12">
+                                </div>
+
+                                <div class="proj-desc">
+                                    <p>Description</p>
+                                    <textarea name="" id="" cols="30" rows="5"></textarea>
+                                </div>
+                            </div>
+                            <div class="buttons">
+                                <button class="del">Delete</button>
+                                <button class="add">ADD</button>
+                            </div>
+                        </form>
+                        <br>
+
+                    </div>
+
+                    <div class="Certificates">
+
+                        <h2>Certificates</h2>
+                        <div class="addCertis">
+                            <button class="addCerts"> Add Certificates</button>
+                        </div>
+
+                        <h3>Certificate 1</h3>
+
+                        <form action="">
+
+                            <div class="CertiForm">
+                                <div class="title">
+                                    <p>Title</p>
+                                    <input type="text" name="role" id="">
+                                </div>
+                                <div class="Institute">
+                                    <p>Institute</p>
+                                    <input type="text" name="Institute">
+                                </div>
+
+                                <div class="Year">
+                                    <p>Year</p>
+                                    <input type="date">
+                                </div>
+                            </div>
+                            <div class="buttons">
+                                <button class="del">Delete</button>
+                                <button class="add">ADD</button>
+                            </div>
+                        </form>
+                        <br>
+
+                    </div>
+
+                    <div class="Skills">
+
+                        <h2>Skills</h2>
+
+                        <form action="">
+
+                            <div class="SkillsForm">
+                                <div class="Languages">
+                                    <p>Languages</p>
+                                    <input type="text" name="Languages" id="">
+                                </div>
+                                <div class="Softwares">
+                                    <p>Softwares</p>
+                                    <input type="text" name="soft">
+                                </div>
+
+                            </div>
+                        </form>
+                        <br>
+
+                    </div>
+
+                    <div class="PORs">
+
+                        <h2>Position Of Responsibility</h2>
+                        <div class="addPOR">
+                            <button class="addPORs"> Add Position</button>
+                        </div>
+
+                        <h3> Certificate 1</h3>
+
+                        <form action="">
+
+                            <div class="PORForm">
+                                <div class="role">
+                                    <p>Role</p>
+                                    <input type="text" name="role" id="">
+                                </div>
+
+                                <div class="Club">
+                                    <p>Committee/Club</p>
+                                    <input type="text" name="club">
+                                </div>
+
+                                <div class="duration">
+                                    <p>Duration</p>
+                                    <input type="number" name="duration" min="1" max="12">
+                                </div>
+
+                                <div class="por-desc">
+                                    <p>Description</p>
+                                    <textarea name="por-desc" id="" cols="30" rows="5"></textarea>
+                                </div>
+                            </div>
+                            <div class="buttons">
+                                <button class="del">Delete</button>
+                                <button class="add">ADD</button>
+                            </div>
+                        </form>
+
+                        <br>
+                    </div>
+
+                    <div class="extraCurr">
+
+                        <h2>Co-Curricular And Extra-Curricular Activities</h2>
+                        <div class="addActs">
+                            <button class="addActivity"> Add Activity</button>
+                        </div>
+
+                        <h3>Activity 1</h3>
+
+                        <form action="">
+
+                            <div class="ActForm">
+                                <div class="Description">
+                                    <p>Description</p>
+                                    <input type="text" name="role" id="">
+                                </div>
+
+                                <div class="Year">
+                                    <p>Year</p>
+                                    <input type="date">
+                                </div>
+                            </div>
+                            <div class="buttons">
+                                <button class="del">Delete</button>
+                                <button class="add">ADD</button>
+                            </div>
+                        </form>
+                        <br>
+
+                    </div>
+
+                    <div class="acads">
+
+                        <h2>Academic Achievements</h2>
+                        <div class="addAcads">
+                            <button class="addAcad"> Add Achievement</button>
+                        </div>
+
+                        <h3>Activity 1</h3>
+
+                        <form action="">
+
+                            <div class="AcadForm">
+                                <div class="Description">
+                                    <p>Description</p>
+                                    <input type="text" name="role" id="">
+                                </div>
+
+                                <div class="Year">
+                                    <p>Year</p>
+                                    <input type="date">
+                                </div>
+                            </div>
+                            <div class="buttons">
+                                <button class="del">Delete</button>
+                                <button class="add">ADD</button>
+                            </div>
+                        </form>
+                        <br>
+
+                    </div>
+
+                    <div class="buttons1">
+                        <button class="saveDetails">Save Details</button>
+                        <button class="submit">Submit</button>
+                    </div>
+
+                </form>
+            </div>
+
+        </div>
+    </div>
+
+    <script>
+
+        function disableOtherSpecs() {
+            var elements = document.getElementsByClassName("specs");
+            elements[0].setAttribute("disabled", '');
+            elements[1].setAttribute("disabled", '');
+            document.getElementById("ce").setAttribute("selected", '');
+
+        }
+
+        function enableSpecs() {
+            var elements = document.getElementsByClassName("specs");
+            elements[0].removeAttribute("disabled", '');
+            elements[1].removeAttribute("disabled", '');
+        }
+
+        function gpa() {
+            var selectedCourse = document.getElementById("course");
+            var divElement = document.getElementById("sem-gpa");
+            while(divElement.lastElementChild){
+                divElement.removeChild(divElement.lastChild);
+            }
+            if (selectedCourse.value == "btech") {
+               
+                for (let i = 0; i < 8; i++) {
+                    var divElement = document.getElementById("sem-gpa");
+                    semester = i + 1;
+                    var innerDiv = document.createElement("div");
+                    innerDiv.setAttribute("class", "sem");
+
+                    var para = document.createElement("p");
+                    para.innerHTML = "SEM " + semester + " GPA";
+
+                    var ip = document.createElement("input");
+                    ip.setAttribute("type", "number");
+                    ip.setAttribute("min", "0.0");
+                    ip.setAttribute("max", "4.0");
+                    ip.setAttribute("name", "sem" + semester);
+                    ip.setAttribute("id", "sem" + semester);
+
+                    innerDiv.appendChild(para);
+                    innerDiv.appendChild(ip);
+
+                    divElement.appendChild(innerDiv);
+                }
+            }
+
+            else {
+                var selectedCourse = document.getElementById("course");
+                var divElement = document.getElementById("sem-gpa");
+                while(divElement.lastElementChild)
+                {
+                    divElement.removeChild(divElement.lastChild);
+                }
+                for (let i = 0; i < 10; i++) {
+                    semester = i + 1;
+                    var innerDiv = document.createElement("div");
+                    innerDiv.setAttribute("class", "sem");
+
+
+                    var para = document.createElement("p");
+                    para.innerHTML = "SEM " + semester + " GPA";
+
+
+                    var ip = document.createElement("input");
+                    ip.setAttribute("type", "number");
+                    ip.setAttribute("min", "0.0");
+                    ip.setAttribute("max", "4.0");
+                    ip.setAttribute("name", "sem" + semester);
+                    ip.setAttribute("id", "sem" + semester);
+
+
+                    innerDiv.appendChild(para);
+                    innerDiv.appendChild(ip);
+
+                    divElement.appendChild(innerDiv);
+                }
+            }
+        }
+
+    </script>
+</body>
+
+</html>

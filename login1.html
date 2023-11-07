@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="css/login1.css">
+</head>
+<body>
+    <div class="main">
+            <div class="left">
+
+                <div class="left-img">
+                    <img src="assets/campus.jpg" class="campus_img" height="100%">
+                </div>
+
+                <div class="left-content">
+                    <h2 class="left-h1"> Welcome to NMIMS <br> Placement Committee</h2> <br><br><br>
+                    <p class="left-p">Sign in by entering your college id</p>
+                </div>
+
+            </div>
+
+            <div class="right">
+
+                <div class="r-content">
+                        <div class="r-back">
+                            <p>   <a href="index.html" style="text-decoration: none; color: black;"> < Back </a></p>
+                        </div>
+
+                        <div class="nmims-logo">
+                            <div class="img">
+                                <img src="assets/nmims-university-logo 1.png" width="50px">
+                            </div>
+                            <div class="right-h1">
+                                <h1>STUDENT LOGIN</h1>
+                            </div>
+                        </div>
+
+
+
+                        <div class="form">
+                        <form method="post">
+                        
+                            <div class="sapid">
+                                <p class="form-head">SAP ID</p>
+                                <input type="tel" name ="sapid" id="sapid" placeholder="70362019470" maxlength="11">
+                            </div>
+
+
+                            <div class="password">
+                                <p class="form-head">PASSWORD</p>
+                                <div class="input">
+                                    <input type="password" name="pass"  placeholder="**********" id="pass">
+                                    <img  class="eye" src="assets/EYE OFF.png" width="25px" onclick="eye_on(this)" id="eye-off" style="cursor: pointer;">
+                                    <img  class="eye" src="assets/EYE ON.png" width="25px" onclick="eye_off(this)" id="eye-on" style="display: none; cursor: pointer;">
+                                </div>
+                                <p class="text-forgot">Forgot password?</p>
+                            </div>
+
+                            <div class="button">
+                                <button type="submit" name="login-button" style="cursor: pointer;"> LOGIN </button>
+                            </div>
+
+                        </form>
+                    </div>
+
+            </div>
+            </div>
+    </div>
+    <script>
+
+        function eye_on(eyeButton)
+        {
+            var element = document.getElementById("eye-on");
+            element.style.display = "block";
+            eyeButton.style.display = "none";
+            document.getElementById("pass").setAttribute("type", "tel");
+        }
+        
+        function eye_off(eyeBtn)
+        {
+            var element = document.getElementById("eye-off");
+            element.style.display = "inline";
+            eyeBtn.style.display = "none";
+            document.getElementById("pass").setAttribute("type", "password");
+        }
+
+    </script>
+</body>
+</html>

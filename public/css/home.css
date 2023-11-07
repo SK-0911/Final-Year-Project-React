@@ -1,0 +1,345 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: POPPINS;
+}
+body, html{
+    height: 100%;
+}
+
+.menuItem
+{
+    cursor: pointer;
+}
+.main
+{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+.bar1,.bar2,.bar3
+{
+    width: 30px;
+    margin-top: 5px;
+    height: 4px;
+    border-radius: 5px;
+    background-color: black;
+    transition: 0.3s;
+}
+
+.burger-btn
+{
+    margin: 0 50px 0 20px ;
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    cursor: pointer;
+    
+}
+
+
+.titlebar
+{
+    display: flex;
+    justify-content: space-around;
+    border-bottom: 2px solid #e2e2e2;
+   
+}
+.tbar-right
+{
+    justify-content: flex-end;
+    gap: 3rem;
+}
+
+.nmims-logo
+{
+    align-self: center;
+    margin-top: 10px;
+}
+.tbar-left{
+    justify-content: flex-start;
+    align-self: center;
+}
+
+.tbar-left, .tbar-right{
+    width: 50%;
+    display: flex;
+   
+   
+}
+
+.profile, .logout
+{
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.logout
+{
+    margin-right: 40px;
+}
+
+.profile img, .logout img{
+    margin-right: 10px;
+}
+
+
+
+.content
+{
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+  
+}
+
+
+
+.menu
+{
+    width: 250px;
+    height: 100vh;
+    background-color: #F8F8F8;
+    border-right: 10px solid #F8F8F8;
+    transition: 0.2s;
+}
+
+
+
+.bgColor{
+    background-color:#8F2E23;
+    color: white;
+}
+
+
+.menuItem{
+    padding: 20px 20px 20px 40px;
+    border-bottom: 3px solid white;
+}
+
+
+.content--right{
+    padding: 60px 100px;
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    gap: 3em;
+}
+
+.update
+{
+    background-color: #FFF0EE;
+    padding: 15px 25px;
+    border-radius: 10px;
+}
+
+.doc-verification{
+    padding-top: 10px;
+}
+
+
+.training-heading
+{
+    margin-bottom: 20px;
+    grid-column: 1/-1;
+    
+}
+
+.trainings
+{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    gap: 1em;
+}
+
+span{
+    color: #8F2E23;
+    font-weight: 800;
+}
+.training-template
+{
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+    background-color: #e2e2e271;
+    width: fit-content;
+    padding: 16px;
+    border-radius: 15px;
+}
+
+span, .training-info{
+    font-size: 14px;
+}
+
+.chatbot{
+   position: absolute;
+   bottom: 5%;
+   right: 5%;
+   border-radius: 50%;
+}
+
+.chatbot button
+{
+    background-color: black;
+    border: 1px solid;
+    border-radius: 50%;
+    padding: 4px 5px 0;
+}
+
+body{
+    position: relative;
+}
+
+
+@media (max-width:900px) {
+    
+    .trainings
+    {
+        
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        gap: 1em;
+    }
+
+    .content
+    {
+        position: relative;
+    }
+
+    .menu
+    {
+        position: absolute;
+        z-index: 1;
+    }
+    .change .bar1{
+        transform: translate(0, 0px) 
+    }
+    
+    .change .bar3{
+        transform:  translate(0,0) 
+    }
+    
+    .change .bar2{
+        opacity: 1;
+    }
+    
+    .menu
+    {
+        left: -250px;
+    }
+    .menuSlide
+    {
+        translate: 250px 0px ;
+    }
+    .training-template
+    {
+        width: 95%;
+    }
+    .content
+    {
+        padding: 0px;
+    }
+    .content--right{
+        padding: 60px;
+        width: 100%;
+    }
+}
+
+@media (max-width:600px) {
+    .tbar-right{
+       gap: 25px;
+    }
+    .tbar-right p{
+        display: none;
+     }
+
+  
+}
+/*  Chatbot */
+
+
+
+.chatbox{
+    width: 0px;
+    display: none;
+}
+
+.chatbox-btn-clicked{
+    width: 350px;
+    height: 500px;
+    display: block;
+    position: absolute;
+    bottom: 0;
+    right: 0px;
+    z-index: 1;
+}
+
+.chatbot-titlebar
+{
+    background-color: black;
+    color: white;
+    padding: 3px;
+    border-radius: 15px 15px 0 0;
+}
+.btn-x
+{
+    background-color: grey;
+    border-radius: 50%;
+    padding: 0.05% 3%;
+}
+
+#placement-txt{
+    justify-self: start;
+}
+
+.chatbot-titlebar img{
+    margin-top: 7px;
+}
+.chatbot-titlebar ul:last-child{
+    font-size: 20px;
+}
+
+nav ul li{
+    display: inline;
+}
+
+.chatbot-nav ul{
+    display: flex;
+    align-items:center;
+    justify-content: space-around;
+}
+
+.chatbot-text
+{   height: 70%;
+    background-color:white;
+    overflow-y: scroll;
+    z-index: 1;
+}
+
+.query-box{
+    display: flex;
+    width: 100%;
+}
+.query-box input
+{
+    width: 100%;
+    height: 30px;
+    margin-left: 5px;
+    padding: 5px;
+    padding-left: 20px;
+    background-color: #e2e2e271;
+    border: 1px #e2e2e2;
+    border-radius: 15px 3px 3px 15px;
+}
+.query-box button
+{
+    border-radius: 0 40% 40% 0%;
+    background-color: #8F2E23;
+    border:5px solid #8F2E23;
+}

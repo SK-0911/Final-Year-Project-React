@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>NMIMS | Placement Committee</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,400;0,600;0,700;0,800;1,700&family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<style>
+		.login-dropdown-btn {
+		  position: relative;
+		  display: inline-block;
+		}
+		
+		.dropdown-content {
+		  display: none;
+		  position: absolute;
+		  background-color: #f1f1f1;
+		  min-width: 160px;
+		  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+		  z-index: 1;
+		}
+		
+		.dropdown-content a {
+		  color: #ffff;
+		  padding: 12px 16px;
+		  text-decoration: none;
+		  display: block;
+		}
+		
+		.dropdown-content a:hover {background-color: #ddd;}
+		
+		.dropdown:hover .dropdown-content {display: block;}
+		
+		.dropdown:hover .dropbtn {background-color: #3e8e41;}
+		</style>
+</head>
+<body>
+	<section class="header">
+		<nav>
+			<a href="index.html"><img src="https://engineering.nmims.edu/images/2a4ca0eeb31e71b312f1df1b25865a8a.png" alt="NMIMS Logo"></a>
+			<div class="nav-links" id="navLinks">
+				<!-- menu button (for small resolution screens) -->
+				<i class="fa fa-times" onclick="hidemenu()"></i>				
+				<ul>
+					<li><a href="about.html">ABOUT</li></a>
+					<li><a href="">SCHOOLS</li></a>
+					<li><a href="contact.html">CONTACT</li></a>
+					<li><a href="register.html">REGISTER</li></a>
+					<li><a href="login1.html">USER LOGIN</a></li>
+					<!-- <div class="login-dropdown-btn">
+						<li>USER LOGIN
+							<div class="dropdown-content">
+								<a href="#">Student</a>							
+								<a href="#">Admin</a>
+							</div>
+						</li> -->
+					</div>
+				</ul>
+			</div>
+			<i class="fa fa-bars" onclick="showmenu()"></i>
+		</nav>
+
+		<!-- Placement Committe text -->
+		<div class="text-box">
+			<div class="animated-text">
+				<h1>NMIMS Placement Committee</h1>
+				<script src="script.js"></script>
+			</div>
+			<p>Welcome to the official website of Placement Committee of NMIMS Navi Mumbai</p>
+			<br>
+			<a href="#sch" class="hero-btn">Know More</a>
+		</div>
+		
+	</section>
+	<!--      Schools     -->
+	<section class="schools" id="sch">
+		<h1>Programs Under <div style="color: #f44336;">7 Schools of NMIMS</h1>
+		<div class="row">
+			<div class="school-col">
+				<h3 class="school-heading">STME</h3>
+				<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Accusamus, id.</p>
+			</div>
+			<div class="school-col">
+				<h3 class="school-heading">SBM</h3>
+				<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Accusamus, id.</p>
+			</div>
+			<div class="school-col">
+				<h3 class="school-heading">SOL</h3>
+				<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Accusamus, id.</p>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="school-col">
+				<h3 class="school-heading">SOC</h3>
+				<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Accusamus, id.</p>
+			</div>
+			<div class="school-col">
+				<h3 class="school-heading">SOHM</h3>
+				<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Accusamus, id.</p>
+			</div>
+			<div class="school-col">
+				<h3 class="school-heading">SOMASA</h3>
+				<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Accusamus, id.</p>
+			</div>
+		</div>
+
+		<div class="row3">
+			<div class="school-col">
+				<h3 class="school-heading">SOE</h3>
+				<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Accusamus, id.</p>
+			</div>
+		</div>
+
+	</section>
+
+
+	<!-- JavaScript for menu bar -->
+	<script>
+		var navLinks = document.getElementById("navLinks");
+		function showmenu(){
+			navLinks.style.right = "0";
+		}
+		function hidemenu(){
+			navLinks.style.right = "-200px";
+		}
+	</script>	
+
+	<!-- Alumni Section -->
+	
+	<section class="alumni">
+		<h1>Our Alumni</h1>
+		<p>What our students say</p>
+
+		<div class="row">
+			<div class="alumni-col">
+				<img src="assets/user1.jpg" alt="alumni 1">
+				<div>
+					<p> <q>Lorem ips um dolor sit amet, consectetur adipiscing elit. Donec cursus et nunc quis pharetra. Praesent gravida, nisl ut
+					tempor gravida, sapien magna tincidunt nulla, ut rutrum erat purus vel velit. </q></p>
+					<h3>Student 1</h3>
+				</div>
+			</div>
+			<div class="alumni-col">
+				<img src="assets/user2.jpg" alt="alumni 1">
+				<div>
+					<p><q>Lorem ips um dolor sit amet, consectetur adipiscing elit. Donec cursus et nunc quis pharetra. Praesent
+						gravida, nisl ut tempor gravida, sapien magna tincidunt nulla, ut rutrum erat purus vel velit.</q></p>
+					<h3>Student 2</h3>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Company Section -->
+
+	<section class="company-stats">
+		<h1>800+ Students Placed in 100+ Companies</h1>
+		<img src="assets/company.webp" id="company-img">
+	</section>
+	
+	<!-- Footer -->
+
+	<footer>
+		<div class="footer-container">
+			<a href="index.html"><img src="https://engineering.nmims.edu/images/2a4ca0eeb31e71b312f1df1b25865a8a.png" alt="NMIMS Logo"></a>
+			<div class="footer2">
+				<h4>Campuses</h4>
+				<ul>
+					<li><a href="">Mumbai</a></li>
+					<li><a href="">Bengaluru</a></li>
+					<li><a href="">Shirpur</a></li>
+					<li><a href="">Hyderabad</a></li>
+					<li><a href="">Indore</a></li>
+					<li><a href="">Navi Mumbai</a></li>
+					<li><a href="">Dhule</a></li>
+				</ul>
+			</div>
+
+			<div class="footer3">
+				<h4>Administration</h4>
+				<ul>
+					<li><a href="">Chancellor</a></li>
+					<li><a href="">Vice Chancellor</a></li>
+					<li><a href="">Faculty & Staff</a></li>
+				</ul>
+			</div>
+			<div class="footer4">
+				<h4>Socials</h4>
+				<div class="socials">
+					<li><a href=""><i class="fa fa-brands fa-facebook"></i></a></li>
+					<li><a href=""><i class="fa fa-brands fa-twitter"></i></a></li>
+					<li><a href=""></a><i class="fa fa-brands fa-youtube"></i></li>
+				</div>
+			</div>
+
+			
+		</div>
+
+		<div class="copyright">
+			<small>&copy; Copyright 2022. Shri Vile Parle Kelavani Mandal (SVKM) All Rights Reserved.</small>
+		</div>
+	</footer>
+</body>
+</html>

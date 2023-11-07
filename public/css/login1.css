@@ -1,0 +1,292 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.main{
+
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+   font-family: "POPPINS";
+}
+
+.left
+{
+    width: 45%;
+    height: 100%;
+    background: rgba(3, 16, 50, 0.70);
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    overflow: hidden;
+}
+
+
+.left-img
+{
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.left-content
+{
+    z-index: 100;
+    color: white;
+    position: absolute;
+    margin: 20% 20%;
+    width: max-content;
+    text-align: center;
+}
+
+.left-h1
+{
+    font-size: 40px;
+}
+
+.left-p
+{
+    font-size: 24px;
+}
+
+.right{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+}
+
+.r-back
+{
+    margin-bottom: 30px;
+}
+.r-content{
+    width: 65%;
+    margin: auto;
+}
+
+
+.nmims-logo
+{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content:space-between;
+}
+
+.right-h1
+{
+    margin: 0 auto;
+    font-weight: 600;
+}
+
+.sapid, .password, .nmims-logo
+{
+    width: 100%;
+    font-size: 20px;
+}
+
+.form
+{
+    width: 500px;
+}
+
+
+.nmims-logo,.password
+{
+    margin-bottom: 40px;
+}
+
+.sapid
+{
+    margin-bottom: 30px;
+}
+
+input
+{
+    width: 94%;
+    padding: 12px 12px 12px 15px;
+    border-radius: 8px;
+    border: 2px solid;
+    margin: 10px 0;
+    font-size: 18px;
+    line-height: normal;
+}
+
+.input{
+    position: relative;
+}
+
+.eye
+{
+    position: absolute;
+    top:22px;
+    right: 20px;
+}
+
+
+
+
+.text-forgot
+{
+    color: #8F2E23;
+    font-size: 16px;
+    text-align: right;
+    
+}
+button{
+    width: 100%;
+    padding: 12px 12px 12px 15px;
+    font-size: 20px;
+    background-color: #8F2E23;
+    border-radius: 8px;
+    color: white;
+    border: #8F2E23;
+    letter-spacing: 0.01cm;
+    
+}
+
+
+@media  (max-width: 562px) {
+    
+    .main{
+        flex-direction: column;
+    }
+    .r-back{
+        margin-top: 20px;
+    }
+
+    .left{
+        height: 100%;
+        width: 100%;
+       
+    }
+
+    .left-content
+    {
+        width: 100%;
+        margin: 0;
+        height: 100%;
+    }
+    
+
+    .left-h1
+    {
+        font-size: 30px;
+        margin-top: 10%;
+    
+    }
+
+    .left-img img{
+        width: 100%;
+        object-fit: cover;
+    }
+    .left-p{
+        display: none;
+    }
+    .r-content
+    {
+        width: 70%;
+        margin: 0 auto;
+    }
+
+    .right
+    {
+        width: 100%;
+        height: 70%;
+        margin: auto;
+    }
+
+    .form, form{
+        width: 100%;
+        margin: auto;
+    }
+
+
+    .sapid, .password, .button
+    {
+        width: 100%;
+    }
+
+    input{
+        padding:   12px 0px 12px 12px;
+        }
+    .right-h1
+    {
+        font-size: 18px;
+    }
+}
+
+@media  (min-width:563px) and (max-width: 1080px) {
+    .main{
+        flex-direction: column;
+    }
+
+    .left-img img{
+        width: 100%;
+        object-fit: cover;
+    }
+
+    .left{
+        width: 100%;
+        height: 35%;
+        object-fit: cover;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .r-content
+    {
+        width: 65%;
+    }
+    .r-back
+    {
+        margin-top: 20px;   
+    }
+
+    .right
+    {
+        width: 100%;
+        height: 65%;
+    }
+
+    .form, form{
+        width: 100%;
+        margin: auto;
+    }
+
+
+    .sapid, .password, .button
+    {
+        width: 100%;
+    }
+
+   
+   
+    .input
+    {
+        width: 100%;
+    }
+
+    input{
+        padding:   12px 0px 15px 12px;
+        width: 100%;
+    }
+
+   
+    button{
+        width: 102%;
+    }
+    };
+
+
+
+   
+    
+    
+    

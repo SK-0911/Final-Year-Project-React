@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Documents</title>
+    <link rel="stylesheet" href="css/docs.css">
+    <script src="js/script.js"> </script>
+</head>
+
+<body>
+    <div class="main">
+
+        <div class="titlebar">
+
+            <div class="tbar-left">
+                <div class="burger-btn" onclick="myfunction(this)">
+                    <div class="bar1"></div>
+                    <div class="bar2"></div>
+                    <div class="bar3"></div>
+
+                </div>
+
+                <div class="nmims-logo">
+                    <img src="assets/nmims-logo.png" height=40px>
+                </div>
+            </div>
+
+            <div class="tbar-right">
+
+                <div class="profile">
+                    <img src="assets/gear.png" height="25px" srcset="">
+                    <p> SETTINGS</p>
+                </div>
+
+                <div class="logout">
+                    <img src="assets/logout.png" height="25px" alt="" srcset="">
+                    <p>LOGOUT</p>
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="content">
+
+            <div class="menu">
+
+                <div class="index menuItem" onclick="home()">Home</div>
+                <div class="CVBulider menuItem" onclick="cvbuilder()"  >CV Builder</div>
+                <div class="Docs menuItem" onclick="docs()" style="background-color: #8f2e23 ;color: white;">Documents</div>
+                <div class="prep menuItem" onclick="prep();">Preparation</div>
+          
+
+            </div>
+
+            <div class="content--right">
+
+                <div class="heading">
+                    <h2> Upload Scanned Documents </h2> 
+                    <p class="info">Only pdf/jpeg/jpg/png formats are allowed</p>
+                </div>
+
+                <div class="cv">
+                    <h2>CV / Resume</h2>
+                    <div class="buttons">
+                        <input type="file" id="Upload">
+                        <input type="button" value="UPLOAD">
+                    </div>
+                </div>
+                <div class="Last Semester Marksheet">
+                    <h2>Last Semester Marksheet</h2>
+                    <div class="buttons">
+                        <input type="file" id="Upload">
+                        <input type="button" value="UPLOAD">
+                    </div>
+                </div>
+
+                <div class="12th">
+                    <h2>12th Marksheet</h2>
+                    <div class="buttons">
+                        <input type="file" id="Upload">
+                        <input type="button" value="UPLOAD">
+                    </div>
+                </div>
+
+                <div class="10th">
+                    <h2>10th Marksheet</h2>
+                    <div class="buttons">
+                        <input type="file" id="Upload">
+                        <input type="button" value="UPLOAD">
+                    </div>
+                </div>
+
+
+
+
+
+            </div>
+
+
+
+            </div>
+    </div>
+    </body>
